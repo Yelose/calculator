@@ -1,0 +1,52 @@
+<div class="standard-container">
+  <header>
+    <h1>Simple calculator</h1>
+  </header>
+  <main>
+    <div class="operations-screen">
+      <p [innerText]="calculatorService.currentValue"></p>
+      <p [innerText]="calculatorService.lastOperator"></p>
+    </div>
+    <div class="result">
+      <p [innerText]="calculatorService.numberOnMemory"></p>
+    </div>
+    <div class="calculator">
+      <div (click)="clear()" class="two-columns">
+        <p>C</p>
+      </div>
+      <div (click)="deleteLastCharacter()" class="two-columns"><=</div>
+      <div>
+        <p><sup>1</sup>&frasl;<sub>x</sub></p>
+      </div>
+      <div (click)="onKey('squarted')">
+        <p>x<sup>2</sup></p>
+      </div>
+      <div>
+        <p>&radic;<span style="text-decoration: overline">x</span></p>
+      </div>
+      <div (click)="onKey('/')">&divide;</div>
+
+      <div (click)="onKey('7')"><p>7</p></div>
+      <div (click)="onKey('8')"><p>8</p></div>
+      <div (click)="onKey('9')"><p>9</p></div>
+      <div (click)="onKey('*')"><p>x</p></div>
+
+      <div (click)="onKey('4')"><p>4</p></div>
+      <div (click)="onKey('5')"><p>5</p></div>
+      <div (click)="onKey('6')"><p>6</p></div>
+      <div (click)="onKey('-')"><p>-</p></div>
+
+      <div (click)="onKey('1')"><p>1</p></div>
+      <div (click)="onKey('2')"><p>2</p></div>
+      <div (click)="onKey('3')"><p>3</p></div>
+      <div (click)="onKey('+')"><p>+</p></div>
+
+      <div (click)="onKey('+-')">
+        <p><sup>+</sup>&frasl;<sub>-</sub></p>
+      </div>
+      <div (click)="onKey('0')"><p>0</p></div>
+      <div (click)="onKey(',')"><p>,</p></div>
+      <div (click)="onKey('=')"><p>=</p></div>
+    </div>
+  </main>
+</div>
